@@ -33,6 +33,7 @@ package:
     - node_modules/typescript/**
     - node_modules/tsc/**
     - node_modules/googleapis/**
+    - node_modules/.bin/**
 
 provider:
   name: aws
