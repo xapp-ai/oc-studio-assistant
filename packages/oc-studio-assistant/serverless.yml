@@ -1,0 +1,176 @@
+# serverless.yml
+service: oc-studio-assistant
+
+custom:
+  myStage: ${opt:stage, self:provider.stage}
+  myEnvironment:
+    STENTOR_USER_TABLE_NAME:
+      dev: oc-studio-assistant-user-dev
+      test: oc-studio-assistant-user-test
+      prod: oc-studio-assistant-user-prod
+    STENTOR_PII_TABLE_NAME:
+      dev: oc-studio-assistant-pii-dev
+      test: oc-studio-assistant-pii-test
+      prod: oc-studio-assistant-pii-prod
+    SECRET_NAME:
+      dev: OcStudioAssistantDev
+      test: OcStudioAssistantTest
+      prod: OcStudioAssistantProd
+    AWS_PROFILE:
+      dev: dogfooddev
+      test: dogfoodtest
+      prod: dogfoodprod
+
+package:
+  exclude:
+    - .env
+    - yarn.lock
+    - src/**
+    - lib/**/*.d.ts
+    - lib/**/*.js.map
+    - node_modules/*/node_modules/aws-sdk/**
+    - node_modules/*/node_modules/date-fns/**
+    - node_modules/typescript/**
+    - node_modules/tsc/**
+    - node_modules/googleapis/**
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  profile: ${self:custom.myEnvironment.AWS_PROFILE.${self:custom.myStage}}
+  timeout: 15
+  environment:
+    STENTOR_STAGE: ${self:custom.myStage}
+    SECRET_NAME: ${self:custom.myEnvironment.SECRET_NAME.${self:custom.myStage}}
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_USER_TABLE_NAME.${self:custom.myStage}}"
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_USER_TABLE_NAME.${self:custom.myStage}}/index/appId-lastActiveTimestamp-index"
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}"
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/appId-index"
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/phoneNumber-index"
+        - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/emailAddress-index"
+    - Effect: Allow
+      Action:
+        - logs:*
+      Resource: "arn:aws:logs:*:*:*"
+    - Effect: Allow
+      Action:
+        - secretsmanager:GetSecretValue
+      Resource: "arn:aws:secretsmanager:*:*:secret:*"
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "arn:aws:s3:::*"
+
+functions:
+  app:
+    handler: lib/index.handler
+    events:
+      - http:
+          method: POST
+          path: /
+          cors: true
+      - http:
+          method: POST
+          path: /{proxy+}
+          cors: true
+
+resources:
+  Resources:
+    xappVirtualAssistantSecrets:
+      Type: "AWS::SecretsManager::Secret"
+      Properties:
+        Name: ${self:custom.myEnvironment.SECRET_NAME.${self:custom.myStage}}
+        Description: This is the skill secret file (env variables)
+        SecretString: "EXAMPLE=foo"
+    xappVirtualAssistantUserTable:
+      Type: "AWS::DynamoDB::Table"
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+          - AttributeName: appId
+            AttributeType: S
+          - AttributeName: lastActiveTimestamp
+            AttributeType: N
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+          - AttributeName: appId
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 30
+          WriteCapacityUnits: 30
+        TableName: ${self:custom.myEnvironment.STENTOR_USER_TABLE_NAME.${self:custom.myStage}}
+        GlobalSecondaryIndexes:
+          - IndexName: appId-lastActiveTimestamp-index
+            KeySchema:
+              - AttributeName: appId
+                KeyType: HASH
+              - AttributeName: lastActiveTimestamp
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 30
+              WriteCapacityUnits: 30
+    xappVirtualAssistantPiiTable:
+      Type: "AWS::DynamoDB::Table"
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: token
+            AttributeType: S
+          - AttributeName: appId
+            AttributeType: S
+          - AttributeName: phoneNumber
+            AttributeType: S
+          - AttributeName: emailAddress
+            AttributeType: S
+        KeySchema:
+          - AttributeName: token
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 15
+          WriteCapacityUnits: 15
+        TableName: ${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}
+        GlobalSecondaryIndexes:
+          - IndexName: appId-index
+            KeySchema:
+              - AttributeName: appId
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 15
+              WriteCapacityUnits: 15
+          - IndexName: phoneNumber-index
+            KeySchema:
+              - AttributeName: phoneNumber
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 15
+              WriteCapacityUnits: 15
+          - IndexName: emailAddress-index
+            KeySchema:
+              - AttributeName: emailAddress
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 15
+              WriteCapacityUnits: 15

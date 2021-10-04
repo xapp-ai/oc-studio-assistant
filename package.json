@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "repository": "github:xapp-ai/oc-studio-assistant",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@xapp/config": "0.2.3",
+    "lerna": "4.0.0",
+    "semantic-release": "17.4.4"
+  },
+  "scripts": {
+    "lerna": "lerna",
+    "postinstall": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "clean:modules": "lerna clean",
+    "lint": "lerna run lint",
+    "build": "lerna run build",
+    "test": "TZ=UTC lerna run test",
+    "release": "lerna version --yes && git push origin --tags && lerna publish from-git --yes"
+  }
+}

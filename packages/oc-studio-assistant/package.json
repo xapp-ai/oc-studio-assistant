@@ -1,0 +1,63 @@
+{
+  "name": "@xapp/oc-studio-assistant",
+  "repository": "github:xapp-ai/oc-studio-assistant",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.1.433",
+  "description": "Virtual Assistant for OC Studio & 📣 stentor",
+  "types": "lib/index",
+  "typings": "lib/index",
+  "main": "lib/index",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": "^10 || ^12 || ^14"
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.21",
+    "@types/mocha": "8.2.2",
+    "@types/node": "14.14.31",
+    "@types/sinon": "10.0.2",
+    "@types/sinon-chai": "3.2.5",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "@typescript-eslint/parser": "4.32.0",
+    "@xapp/config": "0.2.3",
+    "aws-sdk": "2.999.0",
+    "body-parser": "1.19.0",
+    "chai": "4.3.4",
+    "eslint": "7.32.0",
+    "eslint-plugin-notice": "0.9.10",
+    "express": "4.17.1",
+    "mocha": "8.4.0",
+    "nodemon": "2.0.13",
+    "sinon": "10.0.0",
+    "sinon-chai": "3.7.0",
+    "ts-node": "10.2.0",
+    "typescript": "4.4.3",
+    "rimraf": "3.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf ./lib/*",
+    "build": "tsc -d true -p .",
+    "pretest": "rimraf ./lib && tsc",
+    "prebuild": "rimraf ./lib",
+    "package": "rimraf ./lib && tsc && serverless package",
+    "deploy:dev": "rimraf ./lib && tsc && serverless deploy --stage dev",
+    "deploy:test": "rimraf ./lib && tsc && serverless deploy --stage test --force",
+    "deploy:prod": "rimraf ./lib && tsc && serverless deploy --stage prod",
+    "express": "STENTOR_LOG_LEVEL=debug nodemon src/express.ts",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@xapp/question-answering-handler": "1.5.0",
+    "@xapp/stentor-lex-v2": "1.37.12",
+    "@xapp/stentor-service-lex": "1.37.12",
+    "stentor": "1.45.17",
+    "stentor-channel": "1.45.17",
+    "stentor-user-storage-dynamo": "1.45.16"
+  }
+}
