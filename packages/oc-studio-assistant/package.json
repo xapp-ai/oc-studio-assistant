@@ -54,8 +54,8 @@
   },
   "dependencies": {
     "@xapp/question-answering-handler": "1.5.0",
-    "@xapp/stentor-lex-v2": "1.37.29",
-    "@xapp/stentor-service-lex": "1.37.29",
+    "@xapp/stentor-lex-v2": "1.37.31",
+    "@xapp/stentor-service-lex": "1.37.31",
     "stentor": "1.46.2",
     "stentor-channel": "1.46.2",
     "stentor-user-storage-dynamo": "1.45.20"
