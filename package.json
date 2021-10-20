@@ -1,9 +1,6 @@
 {
   "private": true,
   "repository": "github:xapp-ai/oc-studio-assistant",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@xapp/config": "0.2.3",
     "lerna": "4.0.0",

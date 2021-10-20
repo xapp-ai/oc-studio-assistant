@@ -1,5 +1,6 @@
 /*! Copyright (c) 2021, XAPP AI */
 
+import cors = require("cors");
 import { handler as stentorHandler } from "./index";
 
 const DEFAULT_PORT = 3000;
@@ -13,6 +14,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();

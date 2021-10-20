@@ -12,7 +12,7 @@ custom:
       dev: oc-studio-assistant-pii-dev
       test: oc-studio-assistant-pii-test
       prod: oc-studio-assistant-pii-prod
-    SECRET_NAME:
+    STUDIO_SECRET_NAME:
       dev: OcStudioAssistantDev
       test: OcStudioAssistantTest
       prod: OcStudioAssistantProd
@@ -37,13 +37,13 @@ package:
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   stage: dev
   profile: ${self:custom.myEnvironment.AWS_PROFILE.${self:custom.myStage}}
   timeout: 15
   environment:
     STENTOR_STAGE: ${self:custom.myStage}
-    SECRET_NAME: ${self:custom.myEnvironment.SECRET_NAME.${self:custom.myStage}}
+    STUDIO_SECRET_NAME: ${self:custom.myEnvironment.STUDIO_SECRET_NAME.${self:custom.myStage}}
   region: us-east-1
   iamRoleStatements:
     - Effect: Allow
@@ -61,6 +61,13 @@ provider:
         - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/appId-index"
         - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/phoneNumber-index"
         - "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:custom.myEnvironment.STENTOR_PII_TABLE_NAME.${self:custom.myStage}}/index/emailAddress-index"
+    - Effect: Allow
+      Action:
+        - lex:RecognizeText
+        - lex:PutSession
+        - lex:StartConversation
+        - lex:RecognizeUtterance
+      Resource: "*"
     - Effect: Allow
       Action:
         - logs:*
@@ -92,7 +99,7 @@ resources:
     xappVirtualAssistantSecrets:
       Type: "AWS::SecretsManager::Secret"
       Properties:
-        Name: ${self:custom.myEnvironment.SECRET_NAME.${self:custom.myStage}}
+        Name: ${self:custom.myEnvironment.STUDIO_SECRET_NAME.${self:custom.myStage}}
         Description: This is the skill secret file (env variables)
         SecretString: "EXAMPLE=foo"
     xappVirtualAssistantUserTable:
