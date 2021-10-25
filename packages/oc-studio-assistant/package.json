@@ -57,8 +57,8 @@
     "@xapp/question-answering-handler": "1.5.0",
     "@xapp/stentor-lex-v2": "1.37.35",
     "@xapp/stentor-service-lex": "1.37.35",
-    "stentor": "1.46.5",
-    "stentor-channel": "1.46.5",
-    "stentor-user-storage-dynamo": "1.46.3"
+    "stentor": "1.46.6",
+    "stentor-channel": "1.46.6",
+    "stentor-user-storage-dynamo": "1.46.6"
   }
 }
