@@ -402,6 +402,14 @@
   dependencies:
     fuse.js "6.4.6"
 
+"@xapp/stentor-alexa-lib@1.37.28":
+  version "1.37.28"
+  resolved "https://registry.yarnpkg.com/@xapp/stentor-alexa-lib/-/stentor-alexa-lib-1.37.28.tgz#2c9cf2d9107af73210fe37bb275d813c9d4aec8a"
+  integrity sha512-ixwPE7JtPkd0gnDfNzo+c4hEYt3PaiQQvNwwf81cPtU/r5xdnnIBTK07mYycOL834waVlTrPV729sbi48nYqOw==
+  dependencies:
+    ask-sdk-model "1.36.1"
+    lodash.invert "4.3.0"
+
 "@xapp/stentor-alexa-lib@1.37.35":
   version "1.37.35"
   resolved "https://registry.yarnpkg.com/@xapp/stentor-alexa-lib/-/stentor-alexa-lib-1.37.35.tgz#55a069034614e46d84c2c58fb8ef42267f9e7592"
@@ -409,6 +417,24 @@
   dependencies:
     ask-sdk-model "1.36.1"
     lodash.invert "4.3.0"
+
+"@xapp/stentor-lex-connect@1.37.28":
+  version "1.37.28"
+  resolved "https://registry.yarnpkg.com/@xapp/stentor-lex-connect/-/stentor-lex-connect-1.37.28.tgz#1616e4bf676240025d7432ab8dc6597acafe300e"
+  integrity sha512-klAayFM2j94ZHPfY9dNjNEiH1Zq9HUEcSjCzMZumu7TVTEUSk2S2Zm2EaCbedvEaqUC5S4xjW/mvWXFBJNjbyg==
+  dependencies:
+    "@xapp/patterns" "1.37.6"
+    "@xapp/stentor-alexa-lib" "1.37.28"
+    "@xapp/stentor-lex-lib" "1.37.28"
+    actions-on-google "2.14.0"
+
+"@xapp/stentor-lex-lib@1.37.28":
+  version "1.37.28"
+  resolved "https://registry.yarnpkg.com/@xapp/stentor-lex-lib/-/stentor-lex-lib-1.37.28.tgz#f8f1d41cb67aba95ab002d3a0b00a0c80ec72d43"
+  integrity sha512-D0OWuE/WCgDilFH5cuZxNKzH0ZagEQdMjWCQPXelY3QzWB/Y1t0sX7tA4KUQpnb9JELuCuK2wDmNHazWxgEWvw==
+  dependencies:
+    "@xapp/stentor-alexa-lib" "1.37.28"
+    lodash.merge "4.6.2"
 
 "@xapp/stentor-lex-lib@1.37.35":
   version "1.37.35"

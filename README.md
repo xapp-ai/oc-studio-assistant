@@ -3,11 +3,13 @@
 XAPPMedia's own virtual assistant project "dogfooding" 📣 stentor conversational framework.
 
 ### You need to install serverless
+
 ```
 yarn global add serverless
 ```
 
 ### Don't forget to set up the AWS profiles in the serverless.yml
+
 ```
 [dogfoodtest]
 aws_access_key_id = AKIAWBLAHBLAH
@@ -15,6 +17,7 @@ aws_secret_access_key = ...
 ```
 
 ### Sample .env
+
 ```
 AWS_REGION=us-east-1
 
@@ -31,7 +34,7 @@ STENTOR_PII_TABLE_NAME=oc-studio-assistant-pii-test
 
 # For Alexa eventually
 # OVAI_ALEXA_NO_VERIFY=true
-# ALEXA_APPLICATION_ID=amzn1.ask.skill.81e78553-1aa1-4d6d-8504-9905a1267fff
+# ALEXA_APPLICATION_ID=amzn1.ask.skill.81e78553-3333-4d6d-8504-9905a1267fff
 
 # LEX V2
 LEX_BOT_ID=
