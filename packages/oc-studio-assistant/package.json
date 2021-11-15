@@ -55,10 +55,10 @@
   },
   "dependencies": {
     "@xapp/question-answering-handler": "2.0.1",
-    "@xapp/stentor-lex-v2": "1.39.0",
-    "@xapp/stentor-service-lex": "1.39.0",
-    "stentor": "1.48.17",
-    "stentor-channel": "1.48.17",
+    "@xapp/stentor-lex-v2": "1.39.1",
+    "@xapp/stentor-service-lex": "1.39.1",
+    "stentor": "1.48.18",
+    "stentor-channel": "1.48.18",
     "stentor-user-storage-dynamo": "1.48.17"
   }
 }
