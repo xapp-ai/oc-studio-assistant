@@ -375,13 +375,13 @@
   resolved "https://registry.yarnpkg.com/@xapp/patterns/-/patterns-1.39.13.tgz#d19d17129b2b31aa06a8361bd84ac2755aa2bf22"
   integrity sha512-eNA1e0048Uc2Vm+VT68eL6Kll54yNX20iZVSW6kimYuA0yfzdrP6Rgmbypg8qcuYA68hp+g8LBXA8PrVprZemQ==
 
-"@xapp/question-answering-handler@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@xapp/question-answering-handler/-/question-answering-handler-2.0.1.tgz#a5d85cefeec5b485cdc2c492cd236e0b6325cc03"
-  integrity sha512-L0gnijfH9WRHcAQESsHCLlaW/cV7KDJhtFTQMbF2XgUQlLLw7nVsMJiOvLHJsvvWdXNsLGBM56vP1irAFP6RTw==
+"@xapp/question-answering-handler@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@xapp/question-answering-handler/-/question-answering-handler-2.0.6.tgz#d633cd55d5df3ff7348530867b2f756b64750b6c"
+  integrity sha512-w2xLr7LGVvdbjN0ePmnzCL9GSA+TPrhXeBEp2AH0ozSi1db264wsepVW1S6hjLXKvwj6xscXjbKEgF9MBuQrmQ==
   dependencies:
     fuse.js "6.4.6"
-    linkifyjs "3.0.3"
+    linkifyjs "3.0.4"
 
 "@xapp/stentor-alexa-lib@1.39.22":
   version "1.39.22"
@@ -2143,10 +2143,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-linkifyjs@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-3.0.3.tgz#51ea2160b4c60c2c87c27757a1e9eacd422c6076"
-  integrity sha512-ba5opS5wRHSbDC8VaiDdN14nPGm6LqyRsIPQZGG4qXV4scFdrPneT/uoZOaq9QAPBf6W9I9D/6tNSzWH//815Q==
+linkifyjs@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-3.0.4.tgz#469a1b44903d179e3b23317fd3c4e995453765b9"
+  integrity sha512-JWw1HHMx54g8mEsG7JwI8I/xh7qeJbF6L9u1dQOYW91RdRqDYpnTn1UaNXYkmLD967Vk0xGuyHzuRnkSApby3w==
 
 locate-path@^6.0.0:
   version "6.0.0"
