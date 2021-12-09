@@ -54,7 +54,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@xapp/question-answering-handler": "2.0.1",
+    "@xapp/question-answering-handler": "2.0.6",
     "@xapp/stentor-lex-v2": "1.39.22",
     "@xapp/stentor-service-lex": "1.39.22",
     "stentor": "1.48.37",
