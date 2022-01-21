@@ -1,12 +1,12 @@
 {
-  "name": "@xapp/oc-studio-assistant",
+  "name": "@xapp/assistant",
   "repository": "github:xapp-ai/oc-studio-assistant",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.1.433",
-  "description": "Virtual Assistant for OC Studio & 📣 stentor",
+  "version": "0.0.0",
+  "description": "Virtual Assistant for XAPP AI",
   "types": "lib/index",
   "typings": "lib/index",
   "main": "lib/index",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "engines": {
-    "node": "^10 || ^12 || ^14"
+    "node": "^12 || ^14"
   },
   "devDependencies": {
     "@types/chai": "4.3.0",
@@ -51,10 +51,13 @@
     "deploy:prod": "rimraf ./lib && tsc && serverless deploy --stage prod",
     "express": "STENTOR_LOG_LEVEL=debug nodemon src/express.ts",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "test": "exit 0"
+    "test": "exit 0",
+    "zip": "tsc -d true -p . && node scripts/dist.js"
   },
   "dependencies": {
+    "@xapp/assistant-core": "0.0.0",
     "@xapp/question-answering-handler": "2.0.6",
+    "@xapp/stentor-lex-connect": "1.39.68",
     "@xapp/stentor-lex-v2": "1.39.68",
     "@xapp/stentor-service-lex": "1.39.68",
     "stentor": "1.50.21",

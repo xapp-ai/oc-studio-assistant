@@ -9,6 +9,7 @@ import { Assistant } from "stentor";
 
 // Channels
 import { Stentor } from "stentor-channel";
+import { LexConnect } from "@xapp/stentor-lex-connect";
 import { LexV2Channel } from "@xapp/stentor-lex-v2";
 
 // TODO Hooks this to the Stentor channel. This is the NLU (LExv2)
@@ -19,15 +20,18 @@ import { DynamoUserStorage } from "stentor-user-storage-dynamo";
 
 // Custom Handlers
 import { QuestionAnsweringHandler } from "@xapp/question-answering-handler";
+import { PasswordResetHandler } from "./handlers/PasswordResetHandler";
 
 // Return the handler for running in an AWS Lambda function.
 export const handler: AWSLambda.Handler = new Assistant()
     .withUserStorage(new DynamoUserStorage())
     .withHandlers({
-        QuestionAnsweringHandler: QuestionAnsweringHandler
+        QuestionAnsweringHandler: QuestionAnsweringHandler,
+        PasswordResetHandler: PasswordResetHandler
     })
     .withChannels([
-            LexV2Channel(),
-            Stentor(new LexServiceV2({})) // set lex v2 service for nlu
+        LexConnect(),
+        LexV2Channel(),
+        Stentor(new LexServiceV2({})) // set lex v2 service for nlu
     ])
     .lambda();
