@@ -25,10 +25,12 @@
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "@xapp/config": "0.2.3",
+    "aws-sdk": "2.1053.0",
     "chai": "4.3.4",
     "eslint": "7.32.0",
     "eslint-plugin-notice": "0.9.10",
     "mocha": "8.4.0",
+    "stentor": "1.50.20",
     "sinon": "10.0.0",
     "sinon-chai": "3.7.0",
     "ts-node": "10.3.0",
@@ -40,5 +42,8 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "test": "exit 0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "stentor": "1.X"
+  }
 }
