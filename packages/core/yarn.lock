@@ -149,10 +149,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/aws-lambda@8.10.90":
-  version "8.10.90"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.90.tgz#d9995deb8925afb78b8c6179fc58fa9316925102"
-  integrity sha512-B08uyjXQuOh/Kyj9NZ0BEJjkfqqj4tsAYpbBgUMRydtYAs1Fs5WL5KiYFtu+OoG5mI64pnsvW8ohFgpJYWdWIg==
+"@types/aws-lambda@8.10.91":
+  version "8.10.91"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.91.tgz#25508037c0027d1233922c5a8d0a7d9d842d912e"
+  integrity sha512-vUmJGUqhwZTcrSLE3i9nNJp1gYa83KNv7AX/K30DJKWE31TWw1swdJopOyccttdBqhG3e8SIAqw3q+5ZYxfz0g==
 
 "@types/body-parser@*":
   version "1.19.1"
@@ -2573,12 +2573,12 @@ stentor-utils@1.50.25:
     words-to-numbers "1.5.1"
     xmldoc "1.1.2"
 
-stentor@1.50.25:
-  version "1.50.25"
-  resolved "https://registry.yarnpkg.com/stentor/-/stentor-1.50.25.tgz#a490a8cdb810d56f3b89d27ac2dc4bddb1ea54a5"
-  integrity sha512-2KVNx7ntZifuJXGZqnWpbVsIQ1fWQer7//c5Y9Wa2eEAD8AOb37KZgKfl+cUkB5wyuvC6Yl7YudiOVLU6+ZJQA==
+stentor@1.50.26:
+  version "1.50.26"
+  resolved "https://registry.yarnpkg.com/stentor/-/stentor-1.50.26.tgz#5d481d337503c68a4746a1f85f3f01a3ba74d662"
+  integrity sha512-zVpxrNJ1RC8DJpZsG0rwwyAj0bHhqPMd//REbncfzITjH7yC0zklKKiRU7Qj6seZcT6VhIHLE1FiA5dH9Hl27w==
   dependencies:
-    "@types/aws-lambda" "8.10.90"
+    "@types/aws-lambda" "8.10.91"
     "@types/body-parser" "1.19.2"
     "@types/express" "4.17.13"
     "@xapp/patterns" "1.39.67"
