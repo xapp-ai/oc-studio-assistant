@@ -57,11 +57,11 @@
   "dependencies": {
     "@xapp/assistant-core": "0.0.0",
     "@xapp/question-answering-handler": "2.0.11",
-    "@xapp/stentor-lex-connect": "1.40.72",
-    "@xapp/stentor-lex-v2": "1.40.72",
-    "@xapp/stentor-service-lex": "1.40.72",
-    "stentor": "1.52.35",
-    "stentor-channel": "1.52.35",
-    "stentor-user-storage-dynamo": "1.52.33"
+    "@xapp/stentor-lex-connect": "1.40.75",
+    "@xapp/stentor-lex-v2": "1.40.75",
+    "@xapp/stentor-service-lex": "1.40.75",
+    "stentor": "1.52.37",
+    "stentor-channel": "1.52.37",
+    "stentor-user-storage-dynamo": "1.52.36"
   }
 }
