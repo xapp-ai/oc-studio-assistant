@@ -53,12 +53,12 @@
     "dist"
   ],
   "peerDependencies": {
-    "@xapp/chat-widget": "1.37.4",
+    "@xapp/chat-widget": "1.38.0",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },
   "dependencies": {
-    "@xapp/chat-widget": "1.37.4",
+    "@xapp/chat-widget": "1.38.0",
     "@xapp/assistant-core": "0.0.0",
     "react": "16.14.0",
     "react-dom": "16.14.0"
