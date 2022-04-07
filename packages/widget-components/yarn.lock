@@ -3303,21 +3303,21 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xapp/chat-widget-core@1.37.0":
-  version "1.37.0"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.37.0.tgz#35dfefb2052ae701e749da41022d3bbd06859194"
-  integrity sha512-BLj92vzweE3J7qt2wkBFJ1USsbcDcNq0IGg/Vb+Nq6snng2NbpKmhf//pTjP/s7aJnctO9pDbTCwf2+uKNbG7g==
+"@xapp/chat-widget-core@1.38.1":
+  version "1.38.1"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.38.1.tgz#3c9016024d281255a50588e557c8eecce6adb6b7"
+  integrity sha512-gXedbP3oogskbuM2cQmfb2Br3waRCGjLGBQn1nKN1j6R80CpLP8iZOi+J4WBjPVbEdnGswsdhQpD0v2PFyhG+Q==
   dependencies:
     react "16.14.0"
     react-dom "16.14.0"
 
-"@xapp/chat-widget@1.38.0":
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.38.0.tgz#f58e090519b3164a4ca4787369962e9293770899"
-  integrity sha512-yJtdLg7wt6g5OI8UOKgCYV+ZUnBFklUrYHIDBd2RXHfsmFON9no34+wpZ7Kp5YZB8SeB3804to979mTA4+RU1Q==
+"@xapp/chat-widget@1.38.1":
+  version "1.38.1"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.38.1.tgz#89fb42593597560c3b740b653d970eaff3d8e8a0"
+  integrity sha512-W0fZlFzouDPvVc87k3Vk4qRXN0SC80wxou97rMt574x84j5iF5UZXwfeFEuLy2y7QV4BcLPJOwlVQRs+AYx16w==
   dependencies:
     "@rollup/plugin-replace" "^3.0.0"
-    "@xapp/chat-widget-core" "1.37.0"
+    "@xapp/chat-widget-core" "1.38.1"
     "@xapp/stentor-chat-widget" "1.38.0"
     react-transition-group "4.4.2"
     socket.io-client "4.4.0"
