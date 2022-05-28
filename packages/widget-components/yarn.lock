@@ -3298,32 +3298,32 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xapp/chat-widget-core@1.41.1":
-  version "1.41.1"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.41.1.tgz#bafe723d7b94d0547b56f55aa694b40150420cd5"
-  integrity sha512-uCHsPYzUcMmIJ3MmoeH6+Zb3NP6L0vANTQ4aWcCwfCkusgOo2JYnmZwwBcCCwS4uifIKs6kAjeX0zxxcq1bU5Q==
+"@xapp/chat-widget-core@1.41.2":
+  version "1.41.2"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.41.2.tgz#a41a8b2b8378141d379ee9ac151ea19c8afea579"
+  integrity sha512-U35v2vcnAjlvOpO06tjlqcUhM/4e7clNOHPn1OKp7YhYWDzmW/7nyDS8t5O9JaLDPaUXivZ8d17xshb8y+antg==
 
-"@xapp/chat-widget@1.41.1":
-  version "1.41.1"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.41.1.tgz#7f94dc1fb21edc1665cdd6e4e9e64dddb725b94f"
-  integrity sha512-XARcMpdZZCyy363bMkHsPt8WzcaiGwOpFzJ69Rz04WkhtnrEHcMaEQgIfk2OJloTKDg9Kbld+7XkpUAM9PMCuA==
+"@xapp/chat-widget@1.41.2":
+  version "1.41.2"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.41.2.tgz#3c2c34e98f68678a12e65d0ab5e64a6dbee6e83a"
+  integrity sha512-UiPjGkUlIq2epBq68rgnOv4+mP5YJiXbv+RFrmUYkk55QAS5sbbFXVkz5PXfmfuOV5dzgziFNnXczj8WHjhK+w==
   dependencies:
     "@rollup/plugin-replace" "^4.0.0"
-    "@xapp/chat-widget-core" "1.41.1"
-    "@xapp/stentor-chat-widget" "1.41.1"
+    "@xapp/chat-widget-core" "1.41.2"
+    "@xapp/stentor-chat-widget" "1.41.2"
     date-fns "2.28.0"
     react-transition-group "4.4.2"
     socket.io-client "4.5.1"
     store "2.0.12"
     tslib "2.4.0"
 
-"@xapp/stentor-chat-widget@1.41.1":
-  version "1.41.1"
-  resolved "https://registry.yarnpkg.com/@xapp/stentor-chat-widget/-/stentor-chat-widget-1.41.1.tgz#3fef964b8b1dd09e61cfe0febd3bb3a6aabd39c8"
-  integrity sha512-1xPSV4VyGzC78qz/WFnAuDSuub9UtDEZvK/5sXbEF8zJaja/20DHqs1WXmtY9NO5rZ/hrl/IYmrVq8CsvMDLAA==
+"@xapp/stentor-chat-widget@1.41.2":
+  version "1.41.2"
+  resolved "https://registry.yarnpkg.com/@xapp/stentor-chat-widget/-/stentor-chat-widget-1.41.2.tgz#ac662dbcef2d8b8f698ecf9c687b8cabd0a69ae4"
+  integrity sha512-LDU4yXcB3wLq/kJ8GSG/Ws4RPdRdfzSSuJJgGUXoV/18RpRZWSzCKDC3MrixPr2/4qWkmT0a+/nG8TG76pesow==
   dependencies:
-    stentor-constants "1.55.36"
-    stentor-guards "1.55.36"
+    stentor-constants "1.55.38"
+    stentor-guards "1.55.38"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -11532,17 +11532,17 @@ static-extend@^0.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stentor-constants@1.55.36:
-  version "1.55.36"
-  resolved "https://registry.yarnpkg.com/stentor-constants/-/stentor-constants-1.55.36.tgz#156a3fdbed2f53588a01270445af44351ac26d77"
-  integrity sha512-/rpGGuiV9YcfaHtGMWKbxoElUdhiaMRn6KD6YY6DrJ1SebKow9nMh+yWjwyB3W5gCMtau0tPLZCRckz7QjF1uQ==
+stentor-constants@1.55.38:
+  version "1.55.38"
+  resolved "https://registry.yarnpkg.com/stentor-constants/-/stentor-constants-1.55.38.tgz#ed2682db3e116da0417678aff92d47ac744ab33e"
+  integrity sha512-+jBM4pNNxnuRK7U9JwDqH3FN95rub6KFnqq9GOKoONd5CgrwyIpOeK7j1vyQ9T3zbP1ftVntcV1f1D//xKJRRA==
 
-stentor-guards@1.55.36:
-  version "1.55.36"
-  resolved "https://registry.yarnpkg.com/stentor-guards/-/stentor-guards-1.55.36.tgz#5407f6a5d6a785d4dbdb4fe8c3821c123cd17da8"
-  integrity sha512-LFSf49cwIAtTghzx2GYNk01RBNKGjD58v6wEp1JC2zuDh6HMQPk72wcg3bjsm8kdSP1A4URsKuzG1aWfTrworg==
+stentor-guards@1.55.38:
+  version "1.55.38"
+  resolved "https://registry.yarnpkg.com/stentor-guards/-/stentor-guards-1.55.38.tgz#4b6d94d022ebec87456d7127b2ee481c4e003334"
+  integrity sha512-zjyD6SCHh+mXYUvrWtUuPTxftHDJfAkNvSArkSctZoa5tzaJ6qhfDiN1WjHZXSj8yVWGcRx5cBC0DrwK0k+3XQ==
   dependencies:
-    stentor-constants "1.55.36"
+    stentor-constants "1.55.38"
 
 store2@^2.12.0:
   version "2.12.0"
