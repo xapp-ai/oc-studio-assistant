@@ -37,7 +37,7 @@
     "eslint-plugin-notice": "0.9.10",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-react": "7.30.0",
-    "eslint": "8.18.0",
+    "eslint": "8.20.0",
     "jest": "27.5.1",
     "postcss": "8.4.14",
     "rollup-plugin-peer-deps-external": "2.2.4",
