@@ -30,7 +30,7 @@
     "eslint": "8.20.0",
     "eslint-plugin-notice": "0.9.10",
     "mocha": "9.2.2",
-    "stentor": "1.56.32",
+    "stentor": "1.56.33",
     "sinon": "10.0.0",
     "sinon-chai": "3.7.0",
     "ts-node": "10.9.1",
