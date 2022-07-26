@@ -3433,10 +3433,10 @@
   resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.47.0.tgz#e5c00cdc394ad17d5644f83f71213e1afe5573bc"
   integrity sha512-216DgNbd9CzXYvcclD/7DLR+F0hNWbXHaF66yIItXzB+gOKjuXoyDRWiOJVcjNqp6b1ByMUxj7h4oA4CRjW0fg==
 
-"@xapp/chat-widget@1.47.0":
-  version "1.47.0"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.47.0.tgz#bc7ceb691f17ab51e41913998a271b5c762d9e17"
-  integrity sha512-gi3Jmqwnm6Ofnhd6RM5SpUJLMGMN91gr/UujJOIkS4nIrJQQFGuXeauOIgvXxy2NOikporXgHp7bhwjcNP3b1w==
+"@xapp/chat-widget@1.47.1":
+  version "1.47.1"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.47.1.tgz#156282d66484435e4d4dd921439ff0b860d1f487"
+  integrity sha512-4xC8v4RvlfbM5Aznh/4AGgGsHOYoxAqGIsKktf8Ckm/jhH2qKn21U+xUE9YlMQxUPAnEQhF2HIRwn9sVN3d5Ew==
   dependencies:
     "@rollup/plugin-replace" "^4.0.0"
     "@xapp/chat-widget-core" "1.47.0"
