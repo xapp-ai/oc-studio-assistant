@@ -16,7 +16,7 @@
   "author": "XAPPMedia",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "21.1.0",
+    "@rollup/plugin-commonjs": "22.0.2",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@storybook/addon-actions": "6.5.9",
     "@storybook/addon-essentials": "6.5.9",
