@@ -60,8 +60,8 @@
     "@xapp/stentor-lex-connect": "1.40.262",
     "@xapp/stentor-lex-v2": "1.40.262",
     "@xapp/stentor-service-lex": "1.40.262",
-    "stentor": "1.56.63",
-    "stentor-channel": "1.56.63",
-    "stentor-user-storage-dynamo": "1.56.63"
+    "stentor": "1.56.64",
+    "stentor-channel": "1.56.64",
+    "stentor-user-storage-dynamo": "1.56.64"
   }
 }
