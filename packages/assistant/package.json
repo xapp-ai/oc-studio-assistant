@@ -56,12 +56,12 @@
   },
   "dependencies": {
     "@xapp/assistant-core": "0.0.0",
-    "@xapp/question-answering-handler": "2.1.6",
-    "@xapp/stentor-lex-connect": "1.40.268",
-    "@xapp/stentor-lex-v2": "1.40.268",
-    "@xapp/stentor-service-lex": "1.40.268",
-    "stentor": "1.56.69",
-    "stentor-channel": "1.56.68",
-    "stentor-user-storage-dynamo": "1.56.67"
+    "@xapp/question-answering-handler": "2.1.7",
+    "@xapp/stentor-lex-connect": "1.40.312",
+    "@xapp/stentor-lex-v2": "1.40.312",
+    "@xapp/stentor-service-lex": "1.40.312",
+    "stentor": "1.56.98",
+    "stentor-channel": "1.56.98",
+    "stentor-user-storage-dynamo": "1.56.97"
   }
 }
