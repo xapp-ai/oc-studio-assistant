@@ -3432,32 +3432,55 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xapp/chat-widget-core@1.53.0":
-  version "1.53.0"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.53.0.tgz#2626e970146d8393a3e0087d39372f6beaf3b5f5"
-  integrity sha512-bexf3DS4z5By/QFvgAMRBmGgTKtUx1Y1GmKk9IjsA5euPhFIWn1qhr3Xee+2R0cT+yLZ0q1CosxJtRpLJH0dEA==
+"@wojtekmaj/enzyme-adapter-react-17@0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@wojtekmaj/enzyme-adapter-react-17/-/enzyme-adapter-react-17-0.6.7.tgz#7784bd32f518b186218cebb26c98c852676f30b0"
+  integrity sha512-B+byiwi/T1bx5hcj9wc0fUL5Hlb5giSXJzcnEfJVl2j6dGV2NJfcxDBYX0WWwIxlzNiFz8kAvlkFWI2y/nscZQ==
+  dependencies:
+    "@wojtekmaj/enzyme-adapter-utils" "^0.1.4"
+    enzyme-shallow-equal "^1.0.0"
+    has "^1.0.0"
+    prop-types "^15.7.0"
+    react-is "^17.0.0"
+    react-test-renderer "^17.0.0"
 
-"@xapp/chat-widget@1.53.1":
-  version "1.53.1"
-  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.53.1.tgz#9c5fc5c119061346002a4b821b78b597214f3d47"
-  integrity sha512-MJqM4vmT3utFw/gAOztmFTz5Xdo0kk9DV/wyBePQUgloYExUwBNtmaTYj6dNoH9B1ioCc/8MWyso0CdZg7fTPg==
+"@wojtekmaj/enzyme-adapter-utils@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@wojtekmaj/enzyme-adapter-utils/-/enzyme-adapter-utils-0.1.4.tgz#bcd411ad6e368f17dce5425582c2907104cdb1ad"
+  integrity sha512-ARGIQSIIv3oBia1m5Ihn1VU0FGmft6KPe39SBKTb8p7LSXO23YI4kNtc4M/cKoIY7P+IYdrZcgMObvedyjoSQA==
+  dependencies:
+    function.prototype.name "^1.1.0"
+    has "^1.0.0"
+    object.fromentries "^2.0.0"
+    prop-types "^15.7.0"
+
+"@xapp/chat-widget-core@1.57.3":
+  version "1.57.3"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget-core/-/chat-widget-core-1.57.3.tgz#851dadd2b811ba8de6de1fb07c8adb50fbaeb7f3"
+  integrity sha512-m5/EMPIpS43suCJGSHhPYL1xPh9Dobz/VnoDbyakAymR7W8VbTnMXp8vGvzyKXvSva6+yWUmMAolFBZ3XWEIVQ==
+
+"@xapp/chat-widget@1.57.4":
+  version "1.57.4"
+  resolved "https://registry.yarnpkg.com/@xapp/chat-widget/-/chat-widget-1.57.4.tgz#29f3a14dcc3f7b11e8c951f6ed4fdc56ad9bf8bf"
+  integrity sha512-3NCHkioAb0ZpOSEKe+phG/t7WSfg4JAgPqXgNCzdeZur8/+l9E2qdmQbjLhPZUW7R01M1TsG9v9k1onr6LZycw==
   dependencies:
     "@rollup/plugin-replace" "^4.0.0"
-    "@xapp/chat-widget-core" "1.53.0"
-    "@xapp/stentor-chat-widget" "1.53.1"
+    "@wojtekmaj/enzyme-adapter-react-17" "0.6.7"
+    "@xapp/chat-widget-core" "1.57.3"
+    "@xapp/stentor-chat-widget" "1.57.1"
     date-fns "2.28.0"
     react-transition-group "4.4.5"
     socket.io-client "4.5.1"
     store "2.0.12"
     tslib "2.4.0"
 
-"@xapp/stentor-chat-widget@1.53.1":
-  version "1.53.1"
-  resolved "https://registry.yarnpkg.com/@xapp/stentor-chat-widget/-/stentor-chat-widget-1.53.1.tgz#622b2355ea4077e0cf7d44894fa57cc19cf4f299"
-  integrity sha512-JfAeOBB6cYLrOapa+UUaeDm4rA5cTZcC5kNlMzt1mwA5UqO/QMOnef88XPk+4J+TMMs+AgjAGrGe7ZaEOkv3BA==
+"@xapp/stentor-chat-widget@1.57.1":
+  version "1.57.1"
+  resolved "https://registry.yarnpkg.com/@xapp/stentor-chat-widget/-/stentor-chat-widget-1.57.1.tgz#4152f64464765b7383aba65f4278b523b519086a"
+  integrity sha512-v2Q+/nRoCAEYOUa+CiSnXfHdENXDSCAny0iIHKVHq5dDJoF86deLWLYLH5tu6ezzxYYLy5WiVSa7fGx57ni4Mw==
   dependencies:
-    stentor-constants "1.57.39"
-    stentor-guards "1.57.39"
+    stentor-constants "1.57.84"
+    stentor-guards "1.57.84"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -5817,6 +5840,14 @@ enzyme-adapter-utils@^1.14.0:
     prop-types "^15.7.2"
     semver "^5.7.1"
 
+enzyme-shallow-equal@^1.0.0:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/enzyme-shallow-equal/-/enzyme-shallow-equal-1.0.5.tgz#5528a897a6ad2bdc417c7221a7db682cd01711ba"
+  integrity sha512-i6cwm7hN630JXenxxJFBKzgLC3hMTafFQXflvzHgPmDhOBhxUWDe8AeRv1qp2/uWJ2Y8z5yLWMzmAfkTOiOCZg==
+  dependencies:
+    has "^1.0.3"
+    object-is "^1.1.5"
+
 enzyme-shallow-equal@^1.0.1, enzyme-shallow-equal@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/enzyme-shallow-equal/-/enzyme-shallow-equal-1.0.4.tgz#b9256cb25a5f430f9bfe073a84808c1d74fced2e"
@@ -7234,7 +7265,7 @@ has-values@^1.0.0:
     is-number "^3.0.0"
     kind-of "^4.0.0"
 
-has@^1.0.3:
+has@^1.0.0, has@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
@@ -9811,6 +9842,15 @@ object.entries@^1.1.6:
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
 
+object.fromentries@^2.0.0, object.fromentries@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.6.tgz#cdb04da08c539cffa912dcd368b886e0904bfa73"
+  integrity sha512-VciD13dswC4j1Xt5394WR4MzmAQmlgN72phd/riNp9vtD7tp4QQWJ0R4wvclXcafgcYK8veHRed2W6XeGBvcfg==
+  dependencies:
+    call-bind "^1.0.2"
+    define-properties "^1.1.4"
+    es-abstract "^1.20.4"
+
 "object.fromentries@^2.0.0 || ^1.0.0", object.fromentries@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.5.tgz#7b37b205109c21e741e605727fe8b0ad5fa08251"
@@ -9819,15 +9859,6 @@ object.entries@^1.1.6:
     call-bind "^1.0.2"
     define-properties "^1.1.3"
     es-abstract "^1.19.1"
-
-object.fromentries@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.6.tgz#cdb04da08c539cffa912dcd368b886e0904bfa73"
-  integrity sha512-VciD13dswC4j1Xt5394WR4MzmAQmlgN72phd/riNp9vtD7tp4QQWJ0R4wvclXcafgcYK8veHRed2W6XeGBvcfg==
-  dependencies:
-    call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
 
 object.getownpropertydescriptors@^2.0.3, object.getownpropertydescriptors@^2.1.2:
   version "2.1.3"
@@ -10828,7 +10859,7 @@ prop-types@^15.0.0, prop-types@^15.6.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-prop-types@^15.8.1:
+prop-types@^15.7.0, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -11056,10 +11087,15 @@ react-inspector@^5.1.0:
     is-dom "^1.0.0"
     prop-types "^15.0.0"
 
-react-is@17.0.2, react-is@^17.0.1:
+react-is@17.0.2, react-is@^17.0.0, react-is@^17.0.1, react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+"react-is@^16.12.0 || ^17.0.0 || ^18.0.0":
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
+  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
 react-is@^16.13.1, react-is@^16.8.1, react-is@^16.8.6:
   version "16.13.1"
@@ -11070,6 +11106,14 @@ react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
+
+react-shallow-renderer@^16.13.1:
+  version "16.15.0"
+  resolved "https://registry.yarnpkg.com/react-shallow-renderer/-/react-shallow-renderer-16.15.0.tgz#48fb2cf9b23d23cde96708fe5273a7d3446f4457"
+  integrity sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==
+  dependencies:
+    object-assign "^4.1.1"
+    react-is "^16.12.0 || ^17.0.0 || ^18.0.0"
 
 react-syntax-highlighter@^15.4.5:
   version "15.5.0"
@@ -11091,6 +11135,16 @@ react-test-renderer@^16.0.0-0:
     prop-types "^15.6.2"
     react-is "^16.8.6"
     scheduler "^0.19.1"
+
+react-test-renderer@^17.0.0:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-17.0.2.tgz#4cd4ae5ef1ad5670fc0ef776e8cc7e1231d9866c"
+  integrity sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==
+  dependencies:
+    object-assign "^4.1.1"
+    react-is "^17.0.2"
+    react-shallow-renderer "^16.13.1"
+    scheduler "^0.20.2"
 
 react-transition-group@4.4.5:
   version "4.4.5"
@@ -11658,6 +11712,14 @@ scheduler@^0.19.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
 scheduler@^0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.22.0.tgz#83a5d63594edf074add9a7198b1bae76c3db01b8"
@@ -12078,17 +12140,17 @@ static-extend@^0.1.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-stentor-constants@1.57.39:
-  version "1.57.39"
-  resolved "https://registry.yarnpkg.com/stentor-constants/-/stentor-constants-1.57.39.tgz#e3007ca6dc03e866feccf8ad29f1a92bf5fe616d"
-  integrity sha512-Av0s03tmbF6okHZkICJFbDFFgnVUhvRo1oVA7AacnCo4mxesXxO5XWxKg9B1U03vjUtiScIpCbGQNbldIDaKLw==
+stentor-constants@1.57.84:
+  version "1.57.84"
+  resolved "https://registry.yarnpkg.com/stentor-constants/-/stentor-constants-1.57.84.tgz#3a5e7136003b2a394fd7369d31a0364d0b08dbcf"
+  integrity sha512-aUvpuMtXbuzfhdrgoUiHI7RABC5p2XMuwsQMP8DvhOjssvZvVMhPghAauAoiyHpgPMLy7qLnpoGCgI8vfoxIzQ==
 
-stentor-guards@1.57.39:
-  version "1.57.39"
-  resolved "https://registry.yarnpkg.com/stentor-guards/-/stentor-guards-1.57.39.tgz#06d195c263a4937cbacafb570bd1fd9772329060"
-  integrity sha512-bfjoHkOnY/YbulkneXCShX1kMC3V5caEdyhHeJqnvO9ircHCRuxDLQ/qGSeRIz89zT8mClEbaZXn15kBMmpoDg==
+stentor-guards@1.57.84:
+  version "1.57.84"
+  resolved "https://registry.yarnpkg.com/stentor-guards/-/stentor-guards-1.57.84.tgz#b37bbf7ff394fb3cd0425d1fa13dba2edc2874ff"
+  integrity sha512-YpnxTpFewgSAIhrLKq3VNI8oOELRUXD8WBDXobnG27keDHkX0u8YkhdmGokdtQO/pyegbpB/+uraXNTlo3xv/w==
   dependencies:
-    stentor-constants "1.57.39"
+    stentor-constants "1.57.84"
 
 store2@^2.12.0:
   version "2.12.0"
